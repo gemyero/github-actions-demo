@@ -1,13 +1,15 @@
-name: learn-github-actions
-on: [push]
+name: Test pull request
+on:
+  pull_request:
+    paths:
+      - '**/*.ts'
+    types:
+      - opened
+      - synchronize
 
 jobs:
-  check-bats-version:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: node -v
-      - run: npm install -g bats
-      - run: bats -v
+      - name: List Directories and files
+        run: ls -la 
