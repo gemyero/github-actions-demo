@@ -5,5 +5,5 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
-      - name: docker version
-        run: docker version
+      - name: docker-compose
+        run: docker-compose up
