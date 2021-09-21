@@ -1,0 +1,9 @@
+name: Learn Github Actions
+on: push
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker version
+        run: docker version
