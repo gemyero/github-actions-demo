@@ -12,5 +12,8 @@ jobs:
         run: docker version
 
       - name: build image
-        run: docker build -t gemyero/redis .
+        run: DOCKER_BUILDKIT=1 docker build -t gemyero/redis .
+
+      - name: list images
+        run: docker image ls
       
