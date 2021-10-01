@@ -8,5 +8,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: docker-compose
-        run: docker-compose up
+      - name: docker version
+        run: docker version
+
+      - name: build image
+        run: docker build -t gemyero/redis .
+      
