@@ -11,7 +11,7 @@ afterAll(async () => {
   await server.stop();
 });
 
-describe('Test #1', () => {
+describe('Test #2', () => {
   it('should pass', async () => {
     const query = gql`
       query {
